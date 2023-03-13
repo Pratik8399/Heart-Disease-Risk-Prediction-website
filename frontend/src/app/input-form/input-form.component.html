@@ -1,0 +1,55 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div class="left">
+        <label for="age">AGE</label>
+        <input id="age" type="number" formControlName="age">
+    
+
+        <label for="gender"> GENDER </label>
+           <select class ="select" formControlName="gender" id="type">
+               <option *ngFor="let gender of genders"[value]="gender.type">{{gender.type}}</option>
+           </select>
+    
+        <label for="chestPain"> CHEST PAIN TYPE </label>
+           <select class ="select" formControlName="chestPain" id="type">
+               <option *ngFor="let dtype of dtypes"[value]="dtype.type">{{dtype.type}}</option>
+           </select>
+    
+        <label for="MaxHeartRate">MAXIMUM HEART RATE</label>
+        <input id="MaxHeartRate" type="number" formControlName="MaxHeartRate">
+    
+        
+        <label for="ExerciseInducedAngina"> EXERCISE INDUCED ANGINA  </label>
+           <select class ="select" formControlName="ExerciseInducedAngina" id="type">
+               <option *ngFor="let yntype of yntypes"[value]="yntype.type">{{yntype.type}}</option>
+           </select>
+
+     </div>
+
+     <div class="right">
+    
+        <label for="oldpeak">OLDPEAK</label>
+        <input id="oldpeak" type="number" step='0.1' formControlName="oldpeak">
+    
+        <label for="slope"> SLOPE </label>
+           <select class ="select" formControlName="slope" id="type">
+               <option *ngFor="let dtype of dtypes"[value]="dtype.type">{{dtype.type}}</option>
+           </select>
+    
+
+        <label for="vessels"> VESSELS    </label>
+           <select class ="select" formControlName="vessels" id="type">
+               <option *ngFor="let dtype of dtypes"[value]="dtype.type">{{dtype.type}}</option>
+           </select>
+    
+           
+        <label for="thalassemia"> THALASSEMIA </label>
+           <select class ="select" formControlName="thalassemia" id="type">
+               <option *ngFor="let dtype of dtypes"[value]="dtype.type">{{dtype.type}}</option>
+           </select>
+    </div>
+
+   <button class="button" type="submit">
+    SUBMIT
+   </button>
+
+</form>
